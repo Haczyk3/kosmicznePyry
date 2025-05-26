@@ -1,0 +1,11 @@
+# Ignorowanie systemowych folderów Windows
+Cookies/
+Dane aplikacji/
+Menu Start/
+Moje dokumenty/
+*.lnk  # Ignorowanie skrótów Windows
+*.DAT  # Ignorowanie plików systemowych
+AppData/
+Desktop.ini
+NTUSER.*
+OneDrive/

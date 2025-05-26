@@ -1,0 +1,66 @@
+body {
+  background-image: url("./assets/bg.jpg"); /* Laduje obraz tla */
+  margin: 0; /* Usuwa domyslne marginesy przegladarki */
+  padding: 0; /* Usuwa domyslne wypelnienie (padding) */
+  font-family: Arial; /* Ustawia krok pisma na Arial (czysty, czytelny font bezszeryfowy) */
+  position: relative; /* Ustawia pozycjonowanie wzgledem elementow potomnych (np. do uzycia z "absolute") */
+  text-align: center; /* Ustawia domyslne wyrownanie tekstu i elementow inline na srodku */
+}
+
+.background {
+  position: fixed; /* Ustawia element jako "przyklejony" do ekranu — nie przesuwa sie przy scrollowaniu */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background-size: cover; /* Obraz tla zostanie rozciagniety tak, aby calkowicie zakrywal element, przy zachowaniu proporcji */
+  background-position: center; /* Ustawia obraz tla na srodek (w pionie i poziomie) */
+  background-repeat: no-repeat; /* Zapobiega powtarzaniu sie obrazu tla */
+  filter: blur(
+    2px
+  ); /* Dodaje lekki rozmycie do tla — efekt "rozmytej tapety" */
+  z-index: -1; /* Umieszcza element pod wszystkimi innymi (np. pod trescia strony) */
+}
+
+.content {
+  position: relative; /* Ustawia pozycjonowanie wzgledne – potrzebne np. gdy wewnatrz sa elementy z "absolute" */
+  z-index: 1; /* Ustawia warstwe nad tlem (ktore ma z-index: -1), dzieki czemu tekst jest widoczny nad tapeta */
+  text-align: center; /* Wyrownuje zawartosc tekstowa i elementy inline do srodka */
+  color: #333; /* Ustawia kolor tekstu na ciemnoszary (lepszy kontrast niz czarny) */
+}
+
+h1 {
+  margin-top: 50px; /* Dodaje 50 pikseli odstepu od gory — oddziela naglowek od gornej krawedzi strony */
+  font-size: 3rem; /* Ustawia bardzo duzy rozmiar tekstu (3 razy wiekszy niz domyslny) — nadaje naglowkowi wyrazistosc */
+  color: #4a90e2; /* Ustawia kolor tekstu na jasnobieski — ten sam odcien co przycisk */
+}
+
+p {
+  font-size: 1.5rem; /* Ustawia rozmiar tekstu na 1.5 raza wiekszy niz domyslny (czyli dosc duzy, czytelny tekst) */
+  margin: 30px 0; /* Dodaje 30 pikseli odstepu nad i pod paragrafem, a 0 po bokach */
+}
+
+#clickBtn {
+  padding: 20px 40px; /* Wewnetrzny odstep: 20px gora/dol i 40px lewo/prawo — powieksza przycisk */
+  font-size: 1.2rem; /* Rozmiar tekstu w przycisku (1.2 razy domyslny rozmiar czcionki) */
+  font-weight: bold; /* Pogrubienie tekstu */
+  background-color: #4a90e2; /* Niebieskie tlo przycisku (ladny, nowoczesny kolor) */
+  color: white; /* Kolor tekstu: bialy — dobrze kontrastuje z tlem */
+  border: none; /* Usuwa domyslna ramke przycisku */
+  border-radius: 12px; /* Zaokragla rogi przycisku (im wieksza wartosc, tym bardziej zaokraglone) */
+  cursor: pointer; /* Zmienia kursor na "raczke" po najechaniu myszka (sugeruje, ze to cos klikalnego) */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Dodaje cien — sprawia, ze przycisk wyglada na "wystajacy" z tla */
+  transition: background-color 0.2s ease; /* Dodaje plynne przejscie koloru tla (przy np. hoverze) w ciagu 0.2 sekundy */
+}
+
+#clickBtn:hover {
+  background-color: #357abd; /* reczne przyciemnienie zamiast funkcji darken */
+}
+#rainbowTitle {
+  font-size: 4rem;
+  font-weight: bold;
+  color: red; /* domyślny kolor — JS go będzie zmieniał */
+  text-shadow: 0 0 10px white;
+  transition: color 0.3s ease;
+}
